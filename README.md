@@ -62,31 +62,46 @@ Open PowerShell as Administrator.
 ![Screenshot 2025-04-04 142523](https://github.com/user-attachments/assets/32980cc2-7be2-41ad-847c-91675b1b3ae3)
 
 Navigate to the script's location:
-
+```bash
 cd C:\Path\To\Script
-
+```
 Run the onboarding script:
-
+```bash
 powershell -ExecutionPolicy Bypass -File WindowsDefenderATPOnboardingScript.cmd
+```
 
 Wait for the process to complete.
 
-Step 3: Verifying Onboarding Status
+#
+**Step 3: Verifying Onboarding Status**
 
 Option 1: Check via PowerShell
 
 Run the following command:
-
+```bash
 Get-MpComputerStatus | Select MDEOnboardingState
+```
+![Screenshot 2025-04-04 144705](https://github.com/user-attachments/assets/d60ec23e-f44b-4629-87bc-e5db381ae14e)
 
 1 → Successfully onboarded ✅
 
 0 → Not onboarded ❌
 
+
 Option 2: Check in Microsoft Defender Security Center
 
 Go to Microsoft Defender Security Center (security.microsoft.com)
 
+#
 Navigate to Devices > Device Inventory
+![Screenshot 2025-04-04 134535](https://github.com/user-attachments/assets/20bfd2b2-c026-4c4b-81e6-a75b03252819)
 
+#
 Search for the device by name
+![Screenshot 2025-04-04 144855](https://github.com/user-attachments/assets/a3aa40d1-5342-4141-999b-b27b0397e2fe)
+
+
+#
+**Conclusion**
+
+This guide provides an efficient way to onboard Windows devices to Microsoft Defender for Endpoint (MDE) using the Local Script method. By following these steps, you can ensure your endpoints are protected and reporting to Defender's centralized security management.
